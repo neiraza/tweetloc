@@ -26,22 +26,12 @@
                                     <action selector="authenticate" destination="RMS-SE-a2X" eventType="touchUpInside" id="MFu-1a-7Z2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu9-2e-PET">
-                                <rect key="frame" x="117" y="213" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mapに行く">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="O5h-5G-OWU" kind="push" id="W0j-Bo-bmo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="認証" id="SFU-az-OZh"/>
                     <connections>
-                        <outlet property="tweetMap" destination="yu9-2e-PET" id="38R-gB-fUX"/>
+                        <segue destination="O5h-5G-OWU" kind="push" identifier="openMap" id="EB8-1E-FFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vt8-VA-F4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,7 +122,8 @@
         <!--Navigation Controller-->
         <scene sceneID="MID-H8-H7p">
             <objects>
-                <navigationController definesPresentationContext="YES" id="h57-q7-9PY" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="h57-q7-9PY" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aiG-ie-8vn">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

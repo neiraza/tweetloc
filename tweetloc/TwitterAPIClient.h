@@ -21,6 +21,9 @@ typedef void (^FetchNearByTweets)(NSArray *results, NSError *error);
 typedef void (^GetAccounts)(NSArray *results, int status, NSError *error);
 
 @interface TwitterAPIClient : NSObject
+
+@property (nonatomic) ACAccount *account;
+
 + (TwitterAPIClient *)sharedManager;
 - (void)fetchNearbyTweets:(NSDictionary *)args callback:(FetchNearByTweets)callback;
 - (NSString *)getGeocodeParam:(NSDictionary *)geocode;
@@ -29,4 +32,5 @@ typedef void (^GetAccounts)(NSArray *results, int status, NSError *error);
 - (void)openAccountSetting:(id)target;
 - (void)setUserAccount:(ACAccount *)_account;
 - (void)tweet:(id)target;
+
 @end

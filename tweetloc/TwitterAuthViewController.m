@@ -38,7 +38,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     tweetMap.enabled = NO;
-    [self authenticate];
+
+    NSLog(@"account.... %@", [TwitterAPIClient sharedManager].account);
+    if ([TwitterAPIClient sharedManager].account) {
+        [self performSegueWithIdentifier:@"openMap" sender:self];
+    } else {
+        [self authenticate];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,6 +68,7 @@
                 NSLog(@"account is %@", account);
                 [[TwitterAPIClient sharedManager] setUserAccount:account];
                 tweetMap.enabled = YES;
+                [self performSegueWithIdentifier:@"openMap" sender:self];                
                 break;
             }
             case MultipleAccounts:
@@ -97,6 +104,7 @@
     if (accounts[buttonIndex]) {
         [[TwitterAPIClient sharedManager] setUserAccount:accounts[buttonIndex]];
         tweetMap.enabled = YES;
+        [self performSegueWithIdentifier:@"openMap" sender:self];
     }
 }
 

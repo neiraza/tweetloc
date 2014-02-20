@@ -14,7 +14,6 @@
 
 @interface TwitterAPIClient()
 @property (nonatomic) ACAccountStore *accountStore;
-@property (nonatomic) ACAccount *account;
 @end
 
 @implementation TwitterAPIClient

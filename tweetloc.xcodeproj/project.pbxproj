@@ -74,6 +74,7 @@
 		C09D3EF318B1BE51002398D3 /* TestAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAnnotation.m; sourceTree = "<group>"; };
 		C0B746E918B437800074F46E /* tweetlocTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tweetlocTests-Info.plist"; sourceTree = "<group>"; };
 		C0B746EB18B437BE0074F46E /* tweetloc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tweetloc-Info.plist"; sourceTree = "<group>"; };
+		C0B746ED18B449A10074F46E /* Personal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Personal.h; sourceTree = "<group>"; };
 		C0C5350218B34389008586A6 /* TwitterAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAuthViewController.h; sourceTree = "<group>"; };
 		C0C5350318B34389008586A6 /* TwitterAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAuthViewController.m; sourceTree = "<group>"; };
 		C0EB6CC618B1C1E400271EDF /* NSUserDefaultsUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsUtil.h; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 				C0EB6CCE18B202C700271EDF /* NSString+ToString.m */,
 				C0C5350218B34389008586A6 /* TwitterAuthViewController.h */,
 				C0C5350318B34389008586A6 /* TwitterAuthViewController.m */,
+				C0B746ED18B449A10074F46E /* Personal.h */,
 			);
 			path = tweetloc;
 			sourceTree = "<group>";
@@ -480,6 +482,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tweetloc/tweetloc-Prefix.pch";
+				GCC_WARN_UNUSED_FUNCTION = NO;
 				INFOPLIST_FILE = "tweetloc/tweetloc-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -495,6 +498,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tweetloc/tweetloc-Prefix.pch";
+				GCC_WARN_UNUSED_FUNCTION = NO;
 				INFOPLIST_FILE = "tweetloc/tweetloc-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
